@@ -1,9 +1,6 @@
 FROM node:14.16.0-stretch
 RUN apt-get update
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN apt install -y ./google-chrome*.deb;
-RUN export CHROME_BIN=/usr/bin/google-chrome
-RUN apt install -y vim
-RUN npm install -g @angular/cli
+RUN apt install -y curl
 RUN apt-get clean
-COPY ./send-ding.sh /usr/src/
+COPY ./send-ding.sh /
+RUN sh send-ding.sh -a 1ab5179dd94ed62de026d96ba61b41b1dda42357fdf79a787f11c7708449a06d -t markdown -c pipeine运行失败 -T "tiTle"
