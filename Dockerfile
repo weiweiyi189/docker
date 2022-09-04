@@ -6,3 +6,4 @@ RUN export CHROME_BIN=/usr/bin/google-chrome
 RUN apt install -y vim
 RUN npm install -g @angular/cli
 RUN apt-get clean
+COPY ./send-ding.sh /usr/src/
