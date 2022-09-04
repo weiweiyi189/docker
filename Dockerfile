@@ -4,4 +4,4 @@ RUN apt-get update
 RUN apt install -y curl
 RUN apt-get clean
 COPY ./send-ding.sh /
-RUN sh send-ding.sh -a ${DING_TKON} -t markdown -c pipeine运行成功 -T "title"
+CMD sh send-ding.sh -a ${DING_TKON} -t markdown -c pipeine运行成功 -T "title"
