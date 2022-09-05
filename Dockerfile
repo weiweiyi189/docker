@@ -1,5 +1,5 @@
-ARG DING_TKON
 FROM node:14.16.0-stretch
+ARG DING_TKON
 RUN apt-get update
 RUN apt install -y curl
 RUN apt-get clean
