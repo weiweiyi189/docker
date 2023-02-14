@@ -6,7 +6,7 @@ const ChatBot = require('dingtalk-robot-sender');
 // 初始化变量
 const projectName = process.env.CI_PROJECT_NAME; // 由环境变量获取的工程名称
 const appDir = `/var/www/html`;       // 应用根位置
-const host = process.env.HOST;;
+const host = process.env.HOST;
 const sshPort = process.env.SSHPORT;    // 下载端口
 const port = process.env.PORT;    // 下载端口
 const username = process.env.USERNAME;
@@ -42,7 +42,7 @@ const start = async function () {
         });
 
     console.log('开始上传压缩包');
-    await ssh.putFile(`${__dirname}/${zipName}.zip`,
+    await ssh.putFile(`${zipName}.zip`,
         `${appDir}/${zipName}.zip`)
     await dingSendSuccess(zipName);
 
