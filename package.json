@@ -1,0 +1,12 @@
+{
+  "name": "pack_docker",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "weiweiyi",
+  "main": "pack.js",
+  "dependencies": {
+    "dingtalk-robot-sender": "^1.2.0",
+    "compressing": "^1.7.0",
+    "node-ssh": "13.0.1"
+  }
+}
